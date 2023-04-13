@@ -1,0 +1,44 @@
+.formulario {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 40px;
+  width: 800px;
+  box-shadow: 5px 5px 18px -7px rgba(0, 0, 0, 0.2);
+  max-width: 800px!important;
+
+  h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #673ab7;
+    text-align: center;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    form{
+      margin-top: 30px;
+    }
+
+    .mensagem{
+      margin-top: 20px
+    }
+
+    .buttons{
+      margin-top: 60px;
+      margin-left: 70px;
+
+      .enviar{
+        background-color: #c3a8f2;
+        color: #2c2c2c;
+        margin-right: 30px
+      }
+    }
+
+  }
+
+}
+
+

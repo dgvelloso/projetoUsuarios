@@ -1,0 +1,61 @@
+<section class=" container formulario cadastro-usuario">
+  <div class="row">
+    <div class="col-12 ">
+      <h4>Cadastro de Usuário</h4>
+
+      <form autocomplete="off" [formGroup]="formCadastro" >
+
+          <div class="row">
+              <div class="col-md-7 nome">
+                  <label>Nome:</label>
+                  <input type="text" formControlName="nome" class="form-control" />
+                  <div class="text-danger" *ngIf="(form.nome.touched) && form.nome.invalid" > <!-- -->
+                      <span *ngIf="form.nome.errors.required">
+                          Por favor, preencha o nome.
+                      </span>
+                      <span *ngIf="form.nome.errors.minlength">
+                          Por favor, preencha pelo menos 6 caracteres.
+                      </span>
+                  </div>
+              </div>
+
+              <div class="col-md-7 email">
+                  <label>E-mail:</label>
+                  <input type="text" formControlName="email" class="form-control" />
+                  <div class="text-danger" *ngIf="(form.email.touched) && form.email.invalid"><!--  -->
+                      <span *ngIf="form.email.errors.required">
+                          Por favor, preencha o e-mail.
+                      </span>
+                      <span *ngIf="form.email.errors.minlength">
+                          Por favor, preencha pelo menos 10 caracteres.
+                      </span>
+                  </div>
+              </div>
+
+                <div class="col-md-7 permissao">
+                  <label>Permissão de usuário</label>
+                  <select class="form-select" formControlName="permissao" >
+                      <option value="">Escolha uma opção</option>
+                      <option value="1">BAIXA</option>
+                      <option value="2">MEDIA</option>
+                      <option value="3">ALTA</option>
+                  </select>
+                  <div class="text-danger" *ngIf="(form.permissao.touched) && form.permissao.invalid"> <!--  -->
+                      <span *ngIf="form.permissao.errors.required">
+                          Por favor, selecione a permissao do usuário.
+                      </span>
+                  </div>
+              </div>
+         </div>
+
+          <div class="row buttons">
+              <div class="col-md-6">
+                <button class="enviar" (click)="onSubmit()" mat-raised-button> Enviar</button>
+                <button class="cancelar" (click)="clear()" mat-raised-button> Cancelar</button>
+              </div>
+          </div>
+
+      </form>
+    </div>
+  </div>
+</section>

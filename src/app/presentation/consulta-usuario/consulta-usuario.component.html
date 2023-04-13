@@ -1,0 +1,49 @@
+<section class="container consulta-usuarios">
+  <div class="row">
+    <div class="col-12">
+      <h1>Consulta de Usuários</h1>
+      <p>Listagem de usuários cadastrados</p>
+
+
+      <table class="table table-bordered table-hover table-striped mt-3">
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>E-mail</th>
+            <th>Permissão</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  >
+                        <td> {{usuario.nome | uppercase}} </td>
+                        <td> {{usuario.email | lowercase}} </td>
+                        <td>
+                          <span class="badge bg-success" *ngIf="usuario.permissao == '1'">
+                              BAIXA
+                          </span>
+                          <span class="badge bg-warning" *ngIf="usuario.permissao == '2'">
+                              MÉDIA
+                          </span>
+                          <span class="badge bg-danger" *ngIf="usuario.permissao == '3'">
+                              ALTA
+                          </span>
+                      </td>
+                      </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+
+
+          <pagination-controls (pageChange)="handlePageChange($event)" previousLabel="Página anterior"
+            nextLabel="Próxima página">
+
+          </pagination-controls>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>

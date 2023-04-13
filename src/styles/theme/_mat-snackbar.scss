@@ -1,0 +1,36 @@
+.mat-snack-bar-container {
+  max-width: none !important;
+  min-width: auto !important;
+  min-height: auto !important;
+  padding: 10px 20px !important;
+  margin: 0 0 20px 0 !important;
+  background: linear-gradient(180deg, #2d2d2b 50%, #1d1d1b 50%);
+
+  .mat-simple-snackbar-action {
+    .mat-button-wrapper {
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+      border: 1px solid transparentize(white, .7);
+      border-radius: 4px;
+     transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background: transparentize(white, .8);
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+
+  .mat-simple-snackbar {
+    color: white;
+  }
+
+
+
+
+
+  }
+
+
+

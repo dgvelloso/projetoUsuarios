@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* COMPONENTES  */
+@import "/src/styles/_home.component.scss";
+@import "/src/styles/_quem-somos.component.scss";
+@import "/src/styles/_fale-conosco.component.scss";
+@import "/src/styles/_cadastro-usuario.component.scss";
+@import "/src/styles/_consulta-usuario.component.scss";
+
+/* THEME */
+@import "/src/styles/theme/_general.scss";
+@import "/src/styles/theme/_form.scss";
+@import "/src/styles/theme/_mat-card.scss";
+@import "/src/styles/theme/_mat-snackbar.scss";
+
